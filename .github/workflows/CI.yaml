@@ -48,7 +48,7 @@ jobs:
 
       - name: Setup micromamba dev
         if: ${{ matrix.openmm == 'dev' }}
-        uses: mamba-org/setup-micromamba
+        uses: mamba-org/setup-micromamba@2
         with:
           environment-file: devtools/conda-envs/test_env.yaml
           environment-name: test
@@ -63,7 +63,7 @@ jobs:
 
       - name: Setup micromamba
         if: ${{ matrix.openmm != 'dev' }}
-        uses: mamba-org/setup-micromamba
+        uses: mamba-org/setup-micromamba@2
         with:
           environment-file: devtools/conda-envs/test_env.yaml
           environment-name: test
