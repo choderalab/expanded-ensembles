@@ -48,7 +48,7 @@ jobs:
 
       - name: Setup micromamba dev
         if: ${{ matrix.openmm == 'dev' }}
-        uses: mamba-org/provision-with-micromamba@main
+        uses: mamba-org/setup-micromamba
         with:
           environment-file: devtools/conda-envs/test_env.yaml
           environment-name: test
@@ -56,20 +56,20 @@ jobs:
           channel-priority: flexible
           cache-env: true
           cache-downloads: true
-          extra-specs: |
+          create-args: >-
             python==${{ matrix.python-version }}
             openmmtools==0.23.0
             openmm==8.0.0dev3
 
       - name: Setup micromamba
         if: ${{ matrix.openmm != 'dev' }}
-        uses: mamba-org/provision-with-micromamba@main
+        uses: mamba-org/setup-micromamba
         with:
           environment-file: devtools/conda-envs/test_env.yaml
           environment-name: test
           cache-env: true
           cache-downloads: true
-          extra-specs: |
+          create-args: >-
             python==${{ matrix.python-version }}
             openmm==${{ matrix.openmm }}
 
