@@ -28,6 +28,9 @@ jobs:
       matrix:
         python-version: ["3.9", "3.10", "3.11", "3.12"]
         openmm: ["8.0", "8.1.2"]
+        exlcude:
+          - python-version: "3.12"
+            openmm: "8.0"
 
     env:
       OPENMM: ${{ matrix.openmm }}
