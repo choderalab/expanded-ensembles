@@ -3,7 +3,7 @@ channels:
   - conda-forge
   - openeye
 dependencies:
-  - ambertools <23
+  - ambertools
   - arsenic
   - autograd
   - click
@@ -20,6 +20,7 @@ dependencies:
   - mdtraj
   - netcdf4
   - networkx >=2.0
+  - nose
   - numba >=0.55.2
   - numexpr
   - numpy >=1.14
