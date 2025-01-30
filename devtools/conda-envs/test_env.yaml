@@ -3,7 +3,7 @@ channels:
   - conda-forge
   - openeye
 dependencies:
-  - ambertools ==22
+  - ambertools
   - arsenic
   - autograd
   - click
